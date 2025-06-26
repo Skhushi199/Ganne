@@ -28,12 +28,24 @@ export const getLikedSongs = async (): Promise<Song[]> => {
     return [];
   }
 
-  if (!data) {
-    return [];
-  }
+  // if (!data) {
+  //   return [];
+  // }
 
-  return data.map((item) => ({
-    //* Spread relation
-    ...item.songs,
-  }));
+  if (!data) {
+  console.log('No liked song data returned');
+  return [];
+}
+
+console.log('Liked Songs Data:', data);
+
+
+  // return data.map((item) => ({
+  //   //* Spread relation
+  //   ...item.songs,
+  // }));
+
+  return data
+  .filter((item) => item.songs !== null)
+  .map((item) => ({ ...item.songs }));
 };
