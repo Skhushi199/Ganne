@@ -40,8 +40,13 @@ import { useState, useEffect } from 'react';
 
 import { AuthModal } from '@/components/AuthModal';
 import { UploadModal } from '@/components/UploadModal';
+import { Product } from '@/types';
 
-export const ModalProvider = () => {
+interface ModalProviderProps {
+  products: Product[];
+}
+
+export const ModalProvider: React.FC<ModalProviderProps> = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
