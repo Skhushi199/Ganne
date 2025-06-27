@@ -6,16 +6,16 @@ export interface Database {
       customers: {
         Row: {
           id: string;
-          stripe_customer_id: string | null;
+          // stripe_customer_id: string | null;
         };
-        // Insert: {
-        //   id: string;
-        //   stripe_customer_id?: string | null;
-        // };
-        // Update: {
-        //   id?: string;
-        //   stripe_customer_id?: string | null;
-        // };
+        Insert: {
+          id: string;
+          // stripe_customer_id?: string | null;
+        };
+        Update: {
+          id?: string;
+          // stripe_customer_id?: string | null;
+        };
         Relationships: [
           {
             foreignKeyName: 'customers_id_fkey';
@@ -105,33 +105,33 @@ export interface Database {
       //   //   }
       //   // ];
       // };
-      // products: {
-      //   Row: {
-      //     active: boolean | null;
-      //     description: string | null;
-      //     id: string;
-      //     image: string | null;
-      //     metadata: Json | null;
-      //     name: string | null;
-      //   };
-      //   Insert: {
-      //     active?: boolean | null;
-      //     description?: string | null;
-      //     id: string;
-      //     image?: string | null;
-      //     metadata?: Json | null;
-      //     name?: string | null;
-      //   };
-      //   Update: {
-      //     active?: boolean | null;
-      //     description?: string | null;
-      //     id?: string;
-      //     image?: string | null;
-      //     metadata?: Json | null;
-      //     name?: string | null;
-      //   };
-      //   Relationships: [];
-      // };
+      products: {
+        Row: {
+          active: boolean | null;
+          description: string | null;
+          id: string;
+          image: string | null;
+          metadata: Json | null;
+          name: string | null;
+        };
+        Insert: {
+          active?: boolean | null;
+          description?: string | null;
+          id: string;
+          image?: string | null;
+          metadata?: Json | null;
+          name?: string | null;
+        };
+        Update: {
+          active?: boolean | null;
+          description?: string | null;
+          id?: string;
+          image?: string | null;
+          metadata?: Json | null;
+          name?: string | null;
+        };
+        Relationships: [];
+      };
       songs: {
         Row: {
           author: string | null;

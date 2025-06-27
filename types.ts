@@ -24,7 +24,7 @@ export interface Product {
   name?: string;
   description?: string;
   image?: string;
-  metadata?: Record<string, any>; //Stripe.Metadata;
+  metadata?: Record<string, any>; 
 }
 
 // export interface Price {
