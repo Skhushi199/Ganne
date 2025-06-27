@@ -21,7 +21,7 @@ export const Library: React.FC<LibraryProps> = ({ songs }) => {
   // const subscribeModal = useSubscribeModal();
   const authModal = useAuthModal();
   const uploadModal = useUploadModal();
-  const { user, subscription } = useUser();
+  const { user } = useUser();
 
   //* Pass all the songs in the playlist
   const onPlay = useOnPlay(songs);
